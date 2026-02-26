@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MH Wilds Skill Set Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="tag">Monster Hunter Wilds</p>
+      <h1>Skill Set Finder</h1>
+      <p class="subtitle">Pick a skill and level to see armor combinations that can reach it.</p>
+    </section>
+
+    <section class="panel">
+      <form id="finder-form" class="finder-form">
+        <label>
+          Skill
+          <select id="skill-select" required></select>
+        </label>
+
+        <label>
+          Requested level
+          <input id="level-input" type="number" min="1" max="10" value="3" required>
+        </label>
+
+        <button type="submit">Find Sets</button>
+      </form>
+
+      <p id="helper-text" class="helper-text"></p>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
